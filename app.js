@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended : true }));
 
-mongoose.connect("mongodb+srv://admin-adesh:Test123@cluster0.mmozt.mongodb.net/<todoDB>?retryWrites=true&w=majority", {useNewUrlParser: true,  useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect("mongodb+srv://<user>:<password>@cluster0.mmozt.mongodb.net/<todoDB>?retryWrites=true&w=majority", {useNewUrlParser: true,  useUnifiedTopology: true, useFindAndModify: false});
 
 const todoSchema = new mongoose.Schema({
    name : String
